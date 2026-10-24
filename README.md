@@ -31,13 +31,11 @@ Além dos atendimentos odontológicos, a clínica possui produção própria de:
 ---
 Na **Entrega 1**, foram identificados problemas relacionados à organização das informações, principalmente no controle de equipamentos, manutenção, estoque, produção e consultórios.
 
-<!-- LETÍCIA — COMMIT 07: documenta a evolução para a Entrega 2 
-
 Nesta **Entrega 2**, o projeto evolui para uma estrutura de banco de dados relacional capaz de centralizar essas informações e contemplar também processos relacionados a pacientes, agenda, atendimentos, procedimentos, pagamentos, fornecedores e movimentações de estoque.
 
 ---
 
-## 🎯 Objetivo
+<!-- ## 🎯 Objetivo
 
 <!-- LETÍCIA — COMMIT 08: adiciona o objetivo geral do banco 
 
