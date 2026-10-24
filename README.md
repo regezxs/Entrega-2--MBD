@@ -35,25 +35,15 @@ Nesta **Entrega 2**, o projeto evolui para uma estrutura de banco de dados relac
 
 ---
 
-<!-- ## 🎯 Objetivo
-
-<!-- LETÍCIA — COMMIT 08: adiciona o objetivo geral do banco 
+ ## 🎯 Objetivo
 
 Desenvolver um banco de dados relacional que permita:
 
-<!-- LETÍCIA — COMMIT 09: documenta controle de pacientes e atendimentos 
-
 - Centralizar informações da clínica
 - Controlar pacientes e atendimentos
-
-<!-- LETÍCIA — COMMIT 10: documenta agenda, procedimentos e pagamentos 
-
 - Gerenciar agendamentos
 - Registrar procedimentos e tratamentos
 - Controlar pagamentos
-
-<!-- LETÍCIA — COMMIT 11: documenta equipamentos e estoque 
-
 - Gerenciar equipamentos e manutenções
 - Controlar materiais e estoque
 
