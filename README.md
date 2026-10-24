@@ -6,9 +6,9 @@ Projeto acadêmico desenvolvido para a disciplina de **Banco de Dados**, com o o
 
 ---
 
-<!--## 👥 Integrantes
+## 👥 Integrantes
 
-<!-- LETÍCIA — COMMIT 03: adiciona os integrantes e identificação do grupo 
+
 
 | Nome | RGM |
 |---|---|
@@ -19,11 +19,11 @@ Projeto acadêmico desenvolvido para a disciplina de **Banco de Dados**, com o o
 
 ---
 
-## 🏥 Sobre o projeto
+<!--## 🏥 Sobre o projeto
 
 <!-- LETÍCIA — COMMIT 04: documenta o contexto da Odontologia Sasaki -->
 
-A **Odontologia Sasaki** é uma clínica odontológica de médio porte, com aproximadamente **20 colaboradores** e cerca de **500 atendimentos mensais**.
+<!--A **Odontologia Sasaki** é uma clínica odontológica de médio porte, com aproximadamente **20 colaboradores** e cerca de **500 atendimentos mensais**.
 
 <!-- LETÍCIA — COMMIT 05: documenta a produção própria da clínica 
 
