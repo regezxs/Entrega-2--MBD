@@ -36,8 +36,8 @@ Além dos atendimentos odontológicos, a clínica possui produção própria de:
 * **CRO- Clinica: 025226**
 * **CRO- DRA.Luana Sasaki: 104086**
 <p align="center">
-  <img src="IMG_0183.JPG" alt="Porta da Clínica" width="250">
-  <img src="image (1).png" alt="Aluna Letícia com o Dr. Marcelo que mostrou os pontos de dores da clínica" width="300">
+  <img src="PORTA CLÍNICA.png" alt="Porta da Clínica" width="250">
+  <img src="Foto com o doutor marcelo.png" alt="Aluna Letícia com o Dr. Marcelo que mostrou os pontos de dores da clínica" width="300">
 </p>
   
 ---
