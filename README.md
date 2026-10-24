@@ -73,16 +73,12 @@ Essa situação dificulta:
 A proposta do banco de dados é **centralizar essas informações e estabelecer relacionamentos entre os diferentes processos da clínica**.
 
 ---
-<!--
-# 🗂️ Estrutura do Banco de Dados
 
-<!-- LETÍCIA — COMMIT 18: documenta a tecnologia do banco 
+# 🗂️ Estrutura do Banco de Dados
 
 O banco foi desenvolvido utilizando **MySQL**.
 
 ### Principais entidades
-
-<!-- LETÍCIA — COMMIT 19: documenta as primeiras entidades 
 
 ```text
 CONSULTORIO
@@ -92,18 +88,13 @@ FORNECEDOR
 MATERIAL
 ```
 
-<!-- LETÍCIA — COMMIT 20: documenta entidades de equipamentos e atendimento 
-
 ```text
 EQUIPAMENTO
 MANUTENCAO
 AGENDAMENTO
 ATENDIMENTO
 PROCEDIMENTO
-```
-
-<!-- LETÍCIA — COMMIT 21: documenta entidades associativas e financeiras 
-
+``` 
 ```text
 ATENDIMENTO_PROCEDIMENTO
 PLANO_TRATAMENTO
@@ -111,8 +102,6 @@ PLANO_PROCEDIMENTO
 PAGAMENTO
 COMPRA
 ```
-
-<!-- LETÍCIA — COMMIT 22: documenta entidades de estoque, produção e esterilização 
 
 ```text
 ITEM_COMPRA
@@ -124,7 +113,7 @@ ESTERILIZACAO
 
 ---
 
-# 🔗 Relacionamentos principais
+<!--# 🔗 Relacionamentos principais
 
 ### Atendimento
 
