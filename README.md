@@ -55,12 +55,7 @@ Desenvolver um banco de dados relacional que permita:
 ---
 
 ## 🧩 Problema identificado
-
-<!-- LETÍCIA — COMMIT 14: documenta o problema principal
-
 As informações da clínica podem estar distribuídas entre planilhas, anotações e diferentes controles internos.
-
-<!-- LETÍCIA — COMMIT 15: documenta as dificuldades operacionais 
 
 Essa situação dificulta:
 
@@ -69,21 +64,16 @@ Essa situação dificulta:
 - Identificar equipamentos em manutenção
 - Controlar estoque
 - Acompanhar compras
-
-<!-- LETÍCIA — COMMIT 16: complementa as dificuldades identificadas 
-
 - Consultar histórico de manutenção
 - Controlar atendimentos
 - Analisar pagamentos
 - Acompanhar produção
 - Obter indicadores para tomada de decisão
 
-<!-- LETÍCIA — COMMIT 17: documenta a solução proposta 
-
 A proposta do banco de dados é **centralizar essas informações e estabelecer relacionamentos entre os diferentes processos da clínica**.
 
 ---
-
+<!--
 # 🗂️ Estrutura do Banco de Dados
 
 <!-- LETÍCIA — COMMIT 18: documenta a tecnologia do banco 
