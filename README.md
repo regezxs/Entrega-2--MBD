@@ -46,15 +46,9 @@ Desenvolver um banco de dados relacional que permita:
 - Controlar pagamentos
 - Gerenciar equipamentos e manutenções
 - Controlar materiais e estoque
-
-<!-- LETÍCIA — COMMIT 12: documenta compras, produção e esterilização 
-
 - Registrar fornecedores e compras
 - Acompanhar produção interna
 - Registrar processos de esterilização
-
-<!-- LETÍCIA — COMMIT 13: documenta os objetivos gerenciais 
-
 - Gerar informações para análise gerencial
 - Apoiar a tomada de decisões por meio de consultas e indicadores
 
