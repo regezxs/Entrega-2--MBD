@@ -29,6 +29,18 @@ Além dos atendimentos odontológicos, a clínica possui produção própria de:
 - 😬 Aparelhos ortodônticos
 - 🖨️ Peças produzidas por impressão 3D
 ---
+###  Evidências da Organização
+* **Endereço:** R. Jardim Tamoio, 1089 - Conj. Res. José Bonifácio, São Paulo - SP, 08255-010
+* **Google Maps:** [Acessar localização no Google Maps](https://maps.app.goo.gl/ALuZBqSGNaq6kBxy9)
+* **Contato:** `Luduque@hotmail.com` | `+55 11 99001-2968`
+* **CRO- Clinica: 025226**
+* **CRO- DRA.Luana Sasaki: 104086**
+<p align="center">
+  <img src="IMG_0183.JPG" alt="Porta da Clínica" width="250">
+  <img src="image (1).png" alt="Aluna Letícia com o Dr. Marcelo que mostrou os pontos de dores da clínica" width="300">
+</p>
+  
+---
 Na **Entrega 1**, foram identificados problemas relacionados à organização das informações, principalmente no controle de equipamentos, manutenção, estoque, produção e consultórios.
 
 Nesta **Entrega 2**, o projeto evolui para uma estrutura de banco de dados relacional capaz de centralizar essas informações e contemplar também processos relacionados a pacientes, agenda, atendimentos, procedimentos, pagamentos, fornecedores e movimentações de estoque.
