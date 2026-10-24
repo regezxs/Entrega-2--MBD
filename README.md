@@ -23,8 +23,6 @@ Projeto acadêmico desenvolvido para a disciplina de **Banco de Dados**, com o o
 
 A **Odontologia Sasaki** é uma clínica odontológica de médio porte, com aproximadamente **20 colaboradores** e cerca de **500 atendimentos mensais**.
 
-<!-- LETÍCIA — COMMIT 05: documenta a produção própria da clínica 
-
 Além dos atendimentos odontológicos, a clínica possui produção própria de:
 
 - 🦷 Implantes
