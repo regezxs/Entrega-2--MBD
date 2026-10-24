@@ -211,11 +211,50 @@ PRODUCAO N ─── N MATERIAL
 - BRModelo
 - Git/GitHub
 - Markdown
-- Dashboard para visualização dos indicadores
+- Dashboard para visualização dos indicadores-->
 
+## Requisitos do Sistema
+
+### Requisitos Funcionais
+- [x] Cadastrar, alterar e consultar equipamentos.
+- [x] Registrar a localização física e o funcionário responsável.
+- [x] Registrar manutenções preventivas e corretivas.
+- [x] Permitir consulta ao histórico operacional completo.
+- [x] Controlar movimentações (entrada/saída) de estoque.
+- [x] Registrar equipamentos e peças produzidos internamente.
+- [x] Informar status em tempo real *(Disponível, Em Manutenção, Inativo, Em uso)*.
+- [x] Mapear o inventário individual por consultório.
+
+### Requisitos Não Funcionais
+* **Segurança:** Autenticação obrigatória para acesso às funcionalidades.
+* **Usabilidade:** Interface intuitiva e de fácil operação no dia a dia.
+* **Desempenho:** Respostas e consultas otimizadas.
+* **Disponibilidade:** Acesso contínuo para suporte às rotinas operacionais.
+* **Integridade:** Consistência nos dados, evitando inconsistências e duplicidades.
 ---
+## 7. **Modelo Entidade-Relacionamento (DER)**
+<p align="center">
+  <img src="DER.jpg" alt="Modelo entidade-Relacionamento" width="600">
+</p>
 
-# 🗄️ Implementação do Banco
+## Modelo no BRModelo
+
+O modelo também pode ser visualizado diretamente no **BRModelo Web**:
+
+<p align="center">
+
+**[Visualizar modelo no BRModelo Web](https://app.brmodeloweb.com/publicview/6ab1f51fd4acd21f13d78167)**
+
+</p>
+
+## Dicionário de Dados em HTML
+  <p align="center">
+
+**[Visualizar dicionário de dados em HTML](http://127.0.0.1:5500/Dicion%C3%A1rio.html)**
+
+</p>
+---
+<!--# 🗄️ Implementação do Banco
 
 <!-- ISADORA — COMMIT 39: documenta criação do banco 
 
