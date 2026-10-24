@@ -28,9 +28,7 @@ Além dos atendimentos odontológicos, a clínica possui produção própria de:
 - 🦷 Implantes
 - 😬 Aparelhos ortodônticos
 - 🖨️ Peças produzidas por impressão 3D
-
-<!-- LETÍCIA — COMMIT 06: documenta os problemas identificados na Entrega 1 
-
+---
 Na **Entrega 1**, foram identificados problemas relacionados à organização das informações, principalmente no controle de equipamentos, manutenção, estoque, produção e consultórios.
 
 <!-- LETÍCIA — COMMIT 07: documenta a evolução para a Entrega 2 
