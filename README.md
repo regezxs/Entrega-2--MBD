@@ -234,7 +234,7 @@ PRODUCAO N ─── N MATERIAL
 ---
 ## 7. **Modelo Entidade-Relacionamento (DER)**
 <p align="center">
-  <img src="DER.jpg" alt="Modelo entidade-Relacionamento" width="600">
+  <img src="aaaaaaaaaaaa" alt="Modelo entidade-Relacionamento" width="600">
 </p>
 
 ## Modelo no BRModelo
@@ -244,13 +244,6 @@ O modelo também pode ser visualizado diretamente no **BRModelo Web**:
 <p align="center">
 
 **[Visualizar modelo no BRModelo Web](https://app.brmodeloweb.com/publicview/6ab1f51fd4acd21f13d78167)**
-
-</p>
-
-## Dicionário de Dados em HTML
-  <p align="center">
-
-**[Visualizar dicionário de dados em HTML](http://127.0.0.1:5500/Dicion%C3%A1rio.html)**
 
 </p>
 ---
