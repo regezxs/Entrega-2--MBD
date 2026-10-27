@@ -232,9 +232,12 @@ PRODUCAO N ─── N MATERIAL
 * **Disponibilidade:** Acesso contínuo para suporte às rotinas operacionais.
 * **Integridade:** Consistência nos dados, evitando inconsistências e duplicidades.
 ---
-## 7. **Modelo Entidade-Relacionamento (DER)**
+## 7. **Modelo Entidade-Relacionamento (DER) e NoSQL (BRMW)**
 <p align="center">
-  <img src="aaaaaaaaaaaa" alt="Modelo entidade-Relacionamento" width="600">
+  <img src="DER.jpg" alt="Modelo entidade-Relacionamento" width="600">
+</p>
+<p align="center">
+  <img src="NoSQL- BRMW.jpg" alt="Modelo entidade-Relacionamento" width="600">
 </p>
 
 ## Modelo no BRModelo
@@ -246,7 +249,17 @@ O modelo também pode ser visualizado diretamente no **BRModelo Web**:
 **[Visualizar modelo no BRModelo Web](https://app.brmodeloweb.com/publicview/6ab1f51fd4acd21f13d78167)**
 
 </p>
+
+## NoSQL
+
+O modelo também pode ser visualizado de forma online:
+<p align="center">
+
+**[Visualizar modelo no BRMW Web](https://app.brmodeloweb.com/publicview/6ae0ed97b96b0b8504df666a)**
+
+</p>
 ---
+
 <!--# 🗄️ Implementação do Banco
 
 <!-- ISADORA — COMMIT 39: documenta criação do banco 
