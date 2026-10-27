@@ -445,8 +445,6 @@ O banco de dados também serve como base para um **dashboard gerencial**, permit
 - Situação dos atendimentos
 - Procedimentos realizados
 
-<!-- PEDRO — COMMIT 93: adiciona indicadores de agenda 
-
 #### 📅 Agenda
 
 - Total de agendamentos
