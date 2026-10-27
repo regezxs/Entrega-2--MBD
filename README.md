@@ -428,13 +428,11 @@ As consultas auxiliam na identificação de:
 - Equipamentos em manutenção
 - Problemas relacionados ao estoque
 - Registros incompletos
-- Situações incompatíveis com as regras de negócio
+- Situações incompatíveis com as regras de negócio -->
 
 ---
 
 # 📊 Dashboard
-
-<!-- PEDRO — COMMIT 91: cria documentação inicial do dashboard 
 
 O banco de dados também serve como base para um **dashboard gerencial**, permitindo transformar os dados armazenados em indicadores visuais.
 
