@@ -436,9 +436,7 @@ As consultas auxiliam na identificação de:
 
 O banco de dados também serve como base para um **dashboard gerencial**, permitindo transformar os dados armazenados em indicadores visuais.
 
-### Indicadores
-
-<!-- PEDRO — COMMIT 92: adiciona indicadores de atendimento 
+### Indicadores 
 
 #### 🦷 Atendimentos
 
