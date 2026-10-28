@@ -135,9 +135,7 @@ FUNCIONARIO 1 ─── N ATENDIMENTO
 CONSULTORIO 1 ─── N ATENDIMENTO
 ```
 
-<!--### Agendamento
-
-<!-- ISADORA — COMMIT 32: cria/documenta relacionamentos de agendamento
+### Agendamento
 
 ```text
 PACIENTE 1 ─── N AGENDAMENTO
