@@ -399,8 +399,6 @@ O projeto possui consultas voltadas para análise e gerenciamento da clínica.
 
 Também foram criadas consultas de auditoria para verificar a consistência das informações e o cumprimento das regras de negócio.
 
-<!-- JUAN — COMMIT 62: adiciona identificadores das auditorias 
-
 ```text
 A01
 A02
