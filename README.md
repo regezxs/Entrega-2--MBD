@@ -407,8 +407,6 @@ A04
 A05
 ```
 
-<!-- JUAN — COMMIT 63: completa identificadores das auditorias 
-
 ```text
 A06
 A07
