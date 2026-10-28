@@ -573,13 +573,11 @@ ENTREGA 2
 
 <!-- PEDRO — COMMIT 108: documenta expansão das regras 
 
-A Entrega 2 também amplia o controle para pacientes, atendimentos, procedimentos, pagamentos, compras, fornecedores e esterilização.
+A Entrega 2 também amplia o controle para pacientes, atendimentos, procedimentos, pagamentos, compras, fornecedores e esterilização. -->
 
 ---
 
 # 🧪 Dados de teste
-
-<!-- JUAN — COMMIT 65: adiciona documentação dos dados fictícios 
 
 Os dados utilizados no banco são **fictícios** e foram criados exclusivamente para fins acadêmicos.
 
