@@ -414,9 +414,6 @@ A08
 A09
 A10
 ```
-
-<!-- JUAN — COMMIT 64: documenta objetivo das auditorias 
-
 As consultas auxiliam na identificação de:
 
 - Equipamentos sem consultório
