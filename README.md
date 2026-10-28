@@ -125,11 +125,9 @@ ESTERILIZACAO
 
 ---
 
-<!--# 🔗 Relacionamentos principais
+# 🔗 Relacionamentos principais
 
 ### Atendimento
-
-<!-- ISADORA — COMMIT 31: cria/documenta relacionamento de atendimento 
 
 ```text
 PACIENTE 1 ─── N ATENDIMENTO
@@ -137,7 +135,7 @@ FUNCIONARIO 1 ─── N ATENDIMENTO
 CONSULTORIO 1 ─── N ATENDIMENTO
 ```
 
-### Agendamento
+<!--### Agendamento
 
 <!-- ISADORA — COMMIT 32: cria/documenta relacionamentos de agendamento
 
