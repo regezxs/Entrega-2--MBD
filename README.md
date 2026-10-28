@@ -390,13 +390,12 @@ O projeto possui consultas voltadas para análise e gerenciamento da clínica.
 | **G09** | Produção por tipo |
 | **G10** | Custo de manutenção por equipamento |
 | **G11** | Taxa de cancelamento |
-| **G12** | Falhas em ciclos de esterilização |
+| **G12** | Falhas em ciclos de esterilização | -->
 
 ---
 
 # 🔎 Auditoria
 
-<!-- JUAN — COMMIT 61: cria estrutura inicial das auditorias 
 
 Também foram criadas consultas de auditoria para verificar a consistência das informações e o cumprimento das regras de negócio.
 
