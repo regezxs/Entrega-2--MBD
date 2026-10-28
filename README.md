@@ -145,8 +145,6 @@ CONSULTORIO 1 ─── N AGENDAMENTO
 
 ### Equipamentos
 
-<!-- ISADORA — COMMIT 33: cria/documenta relacionamentos de equipamentos 
-
 ```text
 CONSULTORIO 1 ─── N EQUIPAMENTO
 FUNCIONARIO 1 ─── N EQUIPAMENTO
