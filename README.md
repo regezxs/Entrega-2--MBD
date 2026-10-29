@@ -341,8 +341,6 @@ O projeto possui consultas voltadas para análise e gerenciamento da clínica.
 | **G05** | Equipamentos em manutenção |
 | **G06** | Equipamentos por status |
 
-<!-- ISADORA — COMMIT 51: adiciona consultas G07-G12 
-
 | Código | Consulta |
 |---|---|
 | **G07** | Agendamentos por status |
