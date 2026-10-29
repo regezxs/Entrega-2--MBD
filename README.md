@@ -292,8 +292,6 @@ O projeto possui consultas voltadas para análise e gerenciamento da clínica.
 - Situação dos atendimentos
 - Procedimentos realizados
 
-<!-- ISADORA — COMMIT 45: documenta consultas de estoque 
-
 ### 📦 Estoque
 
 - Materiais disponíveis
