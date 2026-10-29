@@ -284,8 +284,6 @@ Foram utilizadas diferentes restrições para garantir a consistência das infor
 
 # 📊 Consultas SQL
 
-<!-- ISADORA — COMMIT 44: documenta consultas de atendimento 
-
 O projeto possui consultas voltadas para análise e gerenciamento da clínica.
 
 ### 📅 Atendimentos
