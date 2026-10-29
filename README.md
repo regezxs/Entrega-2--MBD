@@ -298,8 +298,6 @@ O projeto possui consultas voltadas para análise e gerenciamento da clínica.
 - Materiais abaixo do estoque mínimo
 - Movimentações de estoque
 
-<!-- ISADORA — COMMIT 46: documenta consultas financeiras 
-
 ### 💰 Financeiro
 
 - Receita
