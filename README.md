@@ -189,8 +189,6 @@ PRODUCAO N ─── N MATERIAL
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 ![Markdown](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)
 
-<!-- ISADORA — COMMIT 38: documenta as ferramentas utilizadas 
-
 **Ferramentas:**
 
 - MySQL Workbench
