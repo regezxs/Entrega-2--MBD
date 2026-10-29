@@ -153,8 +153,6 @@ EQUIPAMENTO 1 ─── N MANUTENCAO
 
 ### Procedimentos
 
-<!-- ISADORA — COMMIT 34: documenta relacionamento N:N de procedimentos 
-
 Como um atendimento pode possuir vários procedimentos e um procedimento pode aparecer em vários atendimentos, foi criada a entidade associativa:
 
 ```text
