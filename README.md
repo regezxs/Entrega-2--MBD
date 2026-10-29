@@ -317,8 +317,6 @@ O projeto possui consultas voltadas para análise e gerenciamento da clínica.
 - Agendamentos confirmados
 - Cancelamentos
 
-<!-- ISADORA — COMMIT 49: documenta consultas de produção e esterilização 
-
 ### 🏭 Produção
 
 - Produções realizadas
