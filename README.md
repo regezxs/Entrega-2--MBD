@@ -172,8 +172,6 @@ MATERIAL 1 ─── N ITEM_COMPRA
 
 ### Produção
 
-<!-- ISADORA — COMMIT 36: documenta relacionamento da produção 
-
 ```text
 PRODUCAO N ─── N MATERIAL
             │
