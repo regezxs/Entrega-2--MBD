@@ -252,8 +252,6 @@ O script SQL realiza a criação completa do banco:
 CREATE DATABASE odontologia_sasaki;
 ```
 
-<!-- ISADORA — COMMIT 40: documenta tabelas e chaves 
-
 São implementados:
 
 - Tabelas
