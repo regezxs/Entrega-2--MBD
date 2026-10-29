@@ -259,8 +259,6 @@ São implementados:
 - Chaves estrangeiras
 - Restrições de integridade
 
-<!-- ISADORA — COMMIT 41: documenta validações e relacionamentos 
-
 - Campos obrigatórios
 - Valores padrão
 - Restrições `UNIQUE`
