@@ -270,8 +270,6 @@ São implementados:
 
 # 🔑 Integridade dos dados
 
-<!-- ISADORA — COMMIT 42: adiciona documentação de integridade 
-
 Foram utilizadas diferentes restrições para garantir a consistência das informações.
 
 <!-- ISADORA — COMMIT 43: adiciona tabela de restrições 
