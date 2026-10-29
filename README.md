@@ -313,8 +313,6 @@ O projeto possui consultas voltadas para análise e gerenciamento da clínica.
 - Equipamentos em manutenção
 - Custos de manutenção
 
-<!-- ISADORA — COMMIT 48: documenta consultas de agenda 
-
 ### 📈 Agenda
 
 - Agendamentos
