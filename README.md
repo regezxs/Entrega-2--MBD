@@ -164,8 +164,6 @@ ATENDIMENTO N ─── N PROCEDIMENTO
 
 ### Estoque e compras
 
-<!-- ISADORA — COMMIT 35: documenta relacionamentos de compras 
-
 ```text
 FORNECEDOR 1 ─── N COMPRA
 COMPRA 1 ─── N ITEM_COMPRA
