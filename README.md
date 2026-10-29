@@ -305,8 +305,6 @@ O projeto possui consultas voltadas para análise e gerenciamento da clínica.
 - Formas de pagamento
 - Média dos pagamentos
 
-<!-- ISADORA — COMMIT 47: documenta consultas de equipamentos 
-
 ### 🛠️ Equipamentos
 
 - Equipamentos por status
