@@ -246,8 +246,6 @@ O modelo também pode ser visualizado de forma online:
 
 <!--# 🗄️ Implementação do Banco
 
-<!-- ISADORA — COMMIT 39: documenta criação do banco 
-
 O script SQL realiza a criação completa do banco:
 
 ```sql
