@@ -332,8 +332,6 @@ O projeto possui consultas voltadas para análise e gerenciamento da clínica.
 
 # 📋 Consultas de gerenciamento
 
-<!-- ISADORA — COMMIT 50: adiciona tabela inicial das consultas G01-G06 
-
 | Código | Consulta |
 |---|---|
 | **G01** | Atendimentos realizados por mês |
