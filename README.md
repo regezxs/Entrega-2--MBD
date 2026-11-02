@@ -703,9 +703,9 @@ Teste as consultas de gerenciamento e auditoria disponíveis no script SQL.
 
 ---
 
-# 📈 Resultado esperado
+# 📈 Resultado esperado 
 
-<!-- PEDRO — COMMIT 109: documenta resultado esperado 
+ 
 
 A implementação permite centralizar os principais processos da clínica.
 
