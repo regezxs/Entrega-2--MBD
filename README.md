@@ -489,8 +489,6 @@ ENTREGA 2
 
 # 📌 Regras de negócio
 
-<!-- PEDRO — COMMIT 105: documenta RN01 e RN02 
-
 **RN01** — Todo equipamento deve estar cadastrado no sistema.
 
 **RN02** — Todo equipamento deve estar associado a um consultório/localização.
