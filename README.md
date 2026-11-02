@@ -761,8 +761,6 @@ A **Entrega 2** representa a evolução do projeto desenvolvido na Entrega 1, tr
 
 A solução busca centralizar informações, melhorar a rastreabilidade dos processos e disponibilizar dados para análise e tomada de decisão.
 
-<!-- PEDRO — COMMIT 116: documenta integração do projeto 
-
 A integração entre **Banco de Dados + SQL + Auditoria + Views + Dashboard** permite transformar registros operacionais em informações úteis para a gestão da **Odontologia Sasaki**.
 
 ---
