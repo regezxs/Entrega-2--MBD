@@ -449,9 +449,7 @@ vw_dashboard_financeiro
 
 ```text
 vw_dashboard_agenda
-```
-
-<!-- PEDRO — COMMIT 102: cria view de manutenção 
+``` 
 
 ```text
 vw_dashboard_manutencao
