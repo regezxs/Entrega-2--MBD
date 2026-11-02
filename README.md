@@ -433,8 +433,6 @@ O banco de dados também serve como base para um **dashboard gerencial**, permit
 
 # 👁️ Views do Dashboard
 
-<!-- PEDRO — COMMIT 98: cria view de equipamentos 
-
 Foram criadas views específicas para facilitar a utilização dos dados pelo dashboard:
 
 ```text
