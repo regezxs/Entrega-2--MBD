@@ -497,8 +497,6 @@ ENTREGA 2
 
 **RN04** — Equipamentos em manutenção não devem ser considerados disponíveis para utilização.
 
-<!-- PEDRO — COMMIT 107: documenta RN05 e RN06 
-
 **RN05** — Toda movimentação de saída de estoque deve ser registrada.
 
 **RN06** — A produção interna deve possuir registro dos materiais utilizados.
