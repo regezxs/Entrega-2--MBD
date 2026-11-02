@@ -773,8 +773,6 @@ A integração entre **Banco de Dados + SQL + Auditoria + Views + Dashboard** pe
 **Disciplina:** Banco de Dados  
 **Entrega:** 2 — Modelo Lógico, Implementação, Consultas e Dashboard
 
-<!-- PEDRO — COMMIT 118: adiciona encerramento do README 
-
 ---
 
 ⭐ **Projeto desenvolvido para fins acadêmicos.**
