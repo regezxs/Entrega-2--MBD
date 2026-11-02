@@ -407,9 +407,7 @@ O banco de dados também serve como base para um **dashboard gerencial**, permit
 - Receita
 - Valores recebidos
 - Formas de pagamento
-- Média dos pagamentos
-
-<!-- PEDRO — COMMIT 95: adiciona indicadores de estoque 
+- Média dos pagamentos 
 
 #### 📦 Estoque
 
