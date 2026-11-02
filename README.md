@@ -699,19 +699,15 @@ SHOW TABLES;
 
 ### 6. Execute as consultas
 
-Teste as consultas de gerenciamento e auditoria disponíveis no script SQL.
+Teste as consultas de gerenciamento e auditoria disponíveis no script SQL. -->
 
 ---
 
 # 📈 Resultado esperado 
 
- 
-
 A implementação permite centralizar os principais processos da clínica.
 
-### Fluxo de atendimento
-
-<!-- PEDRO — COMMIT 110: documenta fluxo de atendimento 
+### Fluxo de atendimento 
 
 ```text
 PACIENTE
