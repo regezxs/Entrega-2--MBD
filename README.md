@@ -731,9 +731,7 @@ EQUIPAMENTO
 MANUTENCAO
 ```
 
-### Controle de estoque
-
-<!-- PEDRO — COMMIT 112: documenta fluxo de estoque 
+### Controle de estoque 
 
 ```text
 FORNECEDOR
