@@ -723,8 +723,6 @@ PAGAMENTO
 
 ### Controle de equipamentos
 
-<!-- PEDRO — COMMIT 111: documenta fluxo de equipamentos
-
 ```text
 CONSULTORIO
    ↓
