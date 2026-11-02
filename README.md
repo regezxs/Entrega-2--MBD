@@ -470,8 +470,6 @@ ENTREGA 1
    └── Modelo conceitual / DER
 ```
 
-<!-- PEDRO — COMMIT 104: documenta evolução para Entrega 2 
-
 ```text
              │
              ▼
