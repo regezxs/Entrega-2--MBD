@@ -414,9 +414,7 @@ O banco de dados também serve como base para um **dashboard gerencial**, permit
 - Materiais disponíveis
 - Materiais abaixo do mínimo
 - Entradas e saídas
-- Movimentações
-
-<!-- PEDRO — COMMIT 96: adiciona indicadores de equipamentos 
+- Movimentações 
 
 #### 🛠️ Equipamentos
 
