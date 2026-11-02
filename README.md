@@ -767,8 +767,6 @@ A integração entre **Banco de Dados + SQL + Auditoria + Views + Dashboard** pe
 
 # 👩‍💻 Projeto acadêmico
 
-<!-- PEDRO — COMMIT 117: adiciona identificação acadêmica 
-
 **Odontologia Sasaki — Sistema de Gestão de Banco de Dados**
 
 **Curso:** Análise e Desenvolvimento de Sistemas — UNICID  
