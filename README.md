@@ -443,8 +443,6 @@ vw_dashboard_equipamentos
 vw_dashboard_estoque
 ```
 
-<!-- PEDRO — COMMIT 100: cria view financeira 
-
 ```text
 vw_dashboard_financeiro
 ```
