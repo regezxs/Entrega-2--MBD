@@ -743,9 +743,7 @@ MATERIAL
 ESTOQUE
 ```
 
-### Produção
-
-<!-- PEDRO — COMMIT 113: documenta fluxo de produção 
+### Produção 
 
 ```text
 PRODUCAO
