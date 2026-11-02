@@ -493,8 +493,6 @@ ENTREGA 2
 
 **RN02** — Todo equipamento deve estar associado a um consultório/localização.
 
-<!-- PEDRO — COMMIT 106: documenta RN03 e RN04 
-
 **RN03** — Toda manutenção deve estar relacionada a um equipamento.
 
 **RN04** — Equipamentos em manutenção não devem ser considerados disponíveis para utilização.
