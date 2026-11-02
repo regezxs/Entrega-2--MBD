@@ -437,9 +437,7 @@ Foram criadas views específicas para facilitar a utilização dos dados pelo da
 
 ```text
 vw_dashboard_equipamentos
-```
-
-<!-- PEDRO — COMMIT 99: cria view de estoque 
+``` 
 
 ```text
 vw_dashboard_estoque
