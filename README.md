@@ -402,8 +402,6 @@ O banco de dados também serve como base para um **dashboard gerencial**, permit
 - Cancelamentos
 - Situação da agenda
 
-<!-- PEDRO — COMMIT 94: adiciona indicadores financeiros
-
 #### 💰 Financeiro
 
 - Receita
