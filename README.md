@@ -501,8 +501,6 @@ ENTREGA 2
 
 **RN06** — A produção interna deve possuir registro dos materiais utilizados.
 
-<!-- PEDRO — COMMIT 108: documenta expansão das regras 
-
 A Entrega 2 também amplia o controle para pacientes, atendimentos, procedimentos, pagamentos, compras, fornecedores e esterilização. -->
 
 ---
