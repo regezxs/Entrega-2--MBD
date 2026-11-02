@@ -459,8 +459,6 @@ vw_dashboard_manutencao
 
 # 📐 Evolução do projeto
 
-<!-- PEDRO — COMMIT 103: documenta evolução da Entrega 1 
-
 O projeto foi desenvolvido em duas etapas:
 
 ```text
