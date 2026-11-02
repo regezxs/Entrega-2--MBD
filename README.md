@@ -445,9 +445,7 @@ vw_dashboard_estoque
 
 ```text
 vw_dashboard_financeiro
-```
-
-<!-- PEDRO — COMMIT 101: cria view de agenda 
+``` 
 
 ```text
 vw_dashboard_agenda
