@@ -421,9 +421,7 @@ O banco de dados também serve como base para um **dashboard gerencial**, permit
 - Total de equipamentos
 - Equipamentos por status
 - Equipamentos em manutenção
-- Custos de manutenção
-
-<!-- PEDRO — COMMIT 97: adiciona indicadores de produção 
+- Custos de manutenção 
 
 #### 🏭 Produção
 
