@@ -759,8 +759,6 @@ MATERIAL
 
 A **Entrega 2** representa a evolução do projeto desenvolvido na Entrega 1, transformando o modelo conceitual em uma implementação relacional utilizando **MySQL**.
 
-<!-- PEDRO — COMMIT 115: documenta benefícios da solução 
-
 A solução busca centralizar informações, melhorar a rastreabilidade dos processos e disponibilizar dados para análise e tomada de decisão.
 
 <!-- PEDRO — COMMIT 116: documenta integração do projeto 
