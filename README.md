@@ -244,7 +244,7 @@ O modelo também pode ser visualizado de forma online:
 </p>
 ---
 
-<!--# 🗄️ Implementação do Banco
+# 🗄️ Implementação do Banco
 
 O script SQL realiza a criação completa do banco:
 
