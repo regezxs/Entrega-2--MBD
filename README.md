@@ -509,8 +509,6 @@ A Entrega 2 também amplia o controle para pacientes, atendimentos, procedimento
 
 Os dados utilizados no banco são **fictícios** e foram criados exclusivamente para fins acadêmicos.
 
-<!-- JUAN — COMMIT 66: documenta testes básicos 
-
 Eles permitem testar:
 
 - `INSERT`
@@ -518,8 +516,6 @@ Eles permitem testar:
 - `UPDATE`
 - `DELETE`
 - `JOIN`
-
-<!-- JUAN — COMMIT 67: documenta testes de integridade 
 
 - Relacionamentos
 - Regras de integridade
@@ -531,7 +527,6 @@ Eles permitem testar:
 
 # 🔄 Operações SQL
 
-<!-- JUAN — COMMIT 68: adiciona documentação de INSERT 
 
 O projeto contempla as principais operações de manipulação de dados.
 
@@ -541,16 +536,12 @@ O projeto contempla as principais operações de manipulação de dados.
 INSERT INTO ...
 ```
 
-<!-- JUAN — COMMIT 69: adiciona documentação de SELECT 
-
 ### SELECT
 
 ```sql
 SELECT ...
 FROM ...
 ```
-
-<!-- JUAN — COMMIT 70: adiciona documentação de UPDATE 
 
 ### UPDATE
 
@@ -560,8 +551,6 @@ SET ...
 WHERE ...
 ```
 
-<!-- JUAN — COMMIT 71: adiciona documentação de DELETE 
-
 ### DELETE
 
 ```sql
@@ -569,7 +558,6 @@ DELETE FROM ...
 WHERE ...
 ```
 
-<!-- JUAN — COMMIT 72: documenta operadores de consulta 
 
 Também são utilizadas operações como:
 
@@ -589,11 +577,10 @@ HAVING
 
 # 🤖 Uso de Inteligência Artificial
 
-<!-- JUAN — COMMIT 73: documenta uso de IA 
 
 A Inteligência Artificial foi utilizada como **ferramenta de apoio** durante o desenvolvimento do projeto.
 
-<!-- JUAN — COMMIT 74: documenta atividades realizadas com IA 
+
 
 Entre as atividades realizadas com auxílio de IA:
 
@@ -602,14 +589,14 @@ Entre as atividades realizadas com auxílio de IA:
 - Revisão da modelagem
 - Apoio na elaboração das consultas SQL
 
-<!-- JUAN — COMMIT 75: complementa documentação do uso de IA 
+
 
 - Revisão do código
 - Organização da documentação
 - Estruturação do README
 - Sugestões para apresentação dos dados
 
-<!-- JUAN — COMMIT 76: adiciona transparência sobre decisões da equipe 
+
 
 As decisões finais sobre a modelagem, regras de negócio e implementação foram analisadas e ajustadas pela equipe.
 
@@ -617,7 +604,7 @@ As decisões finais sobre a modelagem, regras de negócio e implementação fora
 
 # 📁 Estrutura do repositório
 
-<!-- JUAN — COMMIT 77: cria documentação da estrutura do repositório 
+
 
 ```text
 odontologia-sasaki/
@@ -628,7 +615,7 @@ odontologia-sasaki/
 │   └── odontologia_sasaki_entrega_2_corrigido.sql
 ```
 
-<!-- JUAN — COMMIT 78: adiciona estrutura de modelos 
+ 
 
 ```text
 ├── modelo/
@@ -636,7 +623,7 @@ odontologia-sasaki/
 │   └── Modelo_Logico/
 ```
 
-<!-- JUAN — COMMIT 79: adiciona estrutura do dashboard 
+
 
 ```text
 ├── dashboard/
@@ -644,7 +631,6 @@ odontologia-sasaki/
 │   └── views/
 ```
 
-<!-- JUAN — COMMIT 80: adiciona estrutura de documentos 
 
 ```text
 └── documentos/
@@ -655,19 +641,18 @@ odontologia-sasaki/
 
 # 🚀 Como executar
 
-<!-- JUAN — COMMIT 81: documenta instalação do MySQL 
 
 ### 1. Instale o MySQL
 
 Utilize uma versão compatível com o script SQL.
 
-<!-- JUAN — COMMIT 82: documenta MySQL Workbench 
+
 
 ### 2. Abra o MySQL Workbench
 
 Crie ou utilize uma conexão com o servidor MySQL.
 
-<!-- JUAN — COMMIT 83: documenta execução do script 
+ 
 
 ### 3. Execute o script
 
@@ -679,7 +664,7 @@ banco/odontologia_sasaki_entrega_2_corrigido.sql
 
 Execute o script completo.
 
-<!-- JUAN — COMMIT 84: documenta seleção do banco 
+
 
 ### 4. Selecione o banco
 
@@ -687,7 +672,6 @@ Execute o script completo.
 USE odontologia_sasaki;
 ```
 
-<!-- JUAN — COMMIT 85: documenta verificação das tabelas 
 
 ### 5. Verifique as tabelas
 
@@ -695,7 +679,6 @@ USE odontologia_sasaki;
 SHOW TABLES;
 ```
 
-<!-- JUAN — COMMIT 86: documenta execução das consultas 
 
 ### 6. Execute as consultas
 
