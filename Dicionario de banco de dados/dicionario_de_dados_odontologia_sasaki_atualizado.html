@@ -1,0 +1,221 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dicionário de Dados — Odontologia Sasaki (Atualizado)</title>
+<style>:root{font-family:system-ui,Arial,sans-serif;color:#193b46;background:#eff7f7}*{box-sizing:border-box}body{margin:0}.top{background:linear-gradient(115deg,#123548,#087d80);color:white;padding:42px max(24px,calc((100% - 1150px)/2))}.top p{color:#d2eeee}.wrap{max-width:1150px;margin:auto;padding:24px 18px 65px}.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.tile,.panel,details{background:white;border:1px solid #d4e5e5;border-radius:14px;padding:18px;margin:12px 0}.tile b{display:block;font-size:30px;color:#057a78}.muted{color:#657d83}.tag{display:inline-block;background:#e0f4f0;color:#006c65;border-radius:6px;padding:3px 7px;font-size:11px}.filter{width:100%;padding:13px;border:1px solid #9fbfc0;border-radius:10px;margin:16px 0}summary{cursor:pointer;font-weight:750;font-size:18px}summary small{font-weight:400;color:#69818b}table{border-collapse:collapse;width:100%;font-size:13px;margin-top:14px}td,th{text-align:left;border-bottom:1px solid #e3ecef;padding:10px 9px;vertical-align:top}th{background:#e9f4f3;color:#355961}code{font-size:12px;overflow-wrap:anywhere}.tablebox{overflow-x:auto}.key{color:#007a7b;font-weight:bold}li{margin:8px 0}@media(max-width:700px){.tiles{grid-template-columns:repeat(2,1fr)}.top{padding:30px 20px}table{min-width:760px}}@media print{.filter{display:none}details{break-inside:avoid}details .tablebox{display:block!important}}</style>
+</head><body><header class="top"><h1>Dicionário de Dados — Odontologia Sasaki</h1><p>Modelo atualizado a partir do DER e das 20 abas de dados da planilha. MySQL 8.0.16+ · Banco: <code>odontologia_sasaki_atualizado</code></p><span class="tag">Atualizado em 08/11/2026</span></header><main class="wrap"><div class="tiles">
+<div class="tile"><b>20</b><span>Tabelas</span></div>
+<div class="tile"><b>140</b><span>Campos</span></div>
+<div class="tile"><b>31</b><span>Chaves estrangeiras</span></div>
+<div class="tile"><b>456</b><span>Registros importados</span></div>
+</div><section class="panel"><h2>Critérios da atualização</h2><p>Os nomes de coluna e os registros vieram da planilha, enquanto os relacionamentos foram alinhados ao DER. Campos adicionais para relacionamentos foram introduzidos quando necessário. O dicionário anterior foi usado para contextualizar as descrições dos campos equivalentes.</p><p><b>Compatibilidade:</b> estados e situações são <code>VARCHAR</code>, pois a planilha traz diferentes valores e grafias. CPFs e CNPJs são armazenados com pontuação, tal como fornecidos. Dados de planilha são fictícios.</p><p><b>Ajustes documentados:</b> <code>atendimento.id_agendamento</code> é vinculado quando a descrição permite correspondência consistente; <code>manutencao.id_funcionario</code> permanece nulo porque a planilha identifica empresas externas por nome; <code>movimentacao_estoque.id_compra</code> e <code>id_producao</code> derivam de <code>origem</code> (Compra #N / Produção #N).</p><p><b>Importante:</b> <code>material.quantidade_estoque</code> corresponde ao saldo apresentado na planilha; as movimentações são históricas e <strong>não são reaplicadas automaticamente</strong> no script de importação, para evitar duplicar os saldos.</p></section><section><h2>Catálogo de entidades</h2><input class="filter" id="search" placeholder="Filtrar tabelas, campos, áreas..." oninput="let q=this.value.toLowerCase();document.querySelectorAll(&quot;details&quot;).forEach(e=>e.hidden=!e.dataset.search.includes(q))">
+<details data-search="consultorio ambientes e salas id_consultorio nome_consultorio numero_sala andar status"><summary><code>consultorio</code> — Ambientes e salas <small>(5 campos · 6 registros · 0 FKs)</small></summary><div class="tablebox"><table><thead><tr><th>Coluna</th><th>Tipo MySQL</th><th>Nulo</th><th>Chave</th><th>Origem</th><th>Descrição</th></tr></thead><tbody>
+<tr><td><code>id_consultorio</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">PK / AUTO_INCREMENT</td><td>PLANILHA</td><td>Identificador único do consultório.</td></tr>
+<tr><td><code>nome_consultorio</code></td><td><code>VARCHAR(180)</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Nome utilizado para identificar o ambiente.</td></tr>
+<tr><td><code>numero_sala</code></td><td><code>VARCHAR(20)</code></td><td>Não</td><td class="key">UNIQUE composto</td><td>PLANILHA</td><td>Número ou código da sala.</td></tr>
+<tr><td><code>andar</code></td><td><code>INT</code></td><td>Sim</td><td class="key">UNIQUE composto</td><td>PLANILHA</td><td>Pavimento onde o consultório está localizado.</td></tr>
+<tr><td><code>status</code></td><td><code>VARCHAR(120)</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Situação de funcionamento do consultório.</td></tr>
+</tbody></table></div></details>
+<details data-search="funcionario equipe clínica id_funcionario nome cpf cargo telefone email data_admissao situacao_profissional"><summary><code>funcionario</code> — Equipe clínica <small>(8 campos · 10 registros · 0 FKs)</small></summary><div class="tablebox"><table><thead><tr><th>Coluna</th><th>Tipo MySQL</th><th>Nulo</th><th>Chave</th><th>Origem</th><th>Descrição</th></tr></thead><tbody>
+<tr><td><code>id_funcionario</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">PK / AUTO_INCREMENT</td><td>PLANILHA</td><td>Identificador único do colaborador.</td></tr>
+<tr><td><code>nome</code></td><td><code>VARCHAR(180)</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Nome completo do funcionário.</td></tr>
+<tr><td><code>cpf</code></td><td><code>VARCHAR(14)</code></td><td>Sim</td><td class="key">UNIQUE</td><td>PLANILHA</td><td>CPF do funcionário, armazenado com 11 algarismos.</td></tr>
+<tr><td><code>cargo</code></td><td><code>VARCHAR(120)</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Cargo ou função exercida.</td></tr>
+<tr><td><code>telefone</code></td><td><code>VARCHAR(120)</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Telefone de contato.</td></tr>
+<tr><td><code>email</code></td><td><code>VARCHAR(150)</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Endereço eletrônico do funcionário.</td></tr>
+<tr><td><code>data_admissao</code></td><td><code>DATE</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Data de admissão na clínica.</td></tr>
+<tr><td><code>situacao_profissional</code></td><td><code>VARCHAR(120)</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Condição profissional do funcionário.</td></tr>
+</tbody></table></div></details>
+<details data-search="paciente cadastro de pacientes id_paciente nome cpf data_nascimento telefone email endereco convenio"><summary><code>paciente</code> — Cadastro de pacientes <small>(8 campos · 20 registros · 0 FKs)</small></summary><div class="tablebox"><table><thead><tr><th>Coluna</th><th>Tipo MySQL</th><th>Nulo</th><th>Chave</th><th>Origem</th><th>Descrição</th></tr></thead><tbody>
+<tr><td><code>id_paciente</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">PK / AUTO_INCREMENT</td><td>PLANILHA</td><td>Identificador único do paciente.</td></tr>
+<tr><td><code>nome</code></td><td><code>VARCHAR(180)</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Nome completo do paciente.</td></tr>
+<tr><td><code>cpf</code></td><td><code>VARCHAR(14)</code></td><td>Sim</td><td class="key">UNIQUE</td><td>PLANILHA</td><td>CPF do paciente, quando informado.</td></tr>
+<tr><td><code>data_nascimento</code></td><td><code>DATE</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Data de nascimento do paciente.</td></tr>
+<tr><td><code>telefone</code></td><td><code>VARCHAR(120)</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Telefone para contato.</td></tr>
+<tr><td><code>email</code></td><td><code>VARCHAR(150)</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Endereço eletrônico informado.</td></tr>
+<tr><td><code>endereco</code></td><td><code>VARCHAR(250)</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Endereço cadastrado.</td></tr>
+<tr><td><code>convenio</code></td><td><code>VARCHAR(120)</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Nome do convênio, quando aplicável.</td></tr>
+</tbody></table></div></details>
+<details data-search="fornecedor empresas fornecedoras id_fornecedor razao_social cnpj telefone email endereco status"><summary><code>fornecedor</code> — Empresas fornecedoras <small>(7 campos · 5 registros · 0 FKs)</small></summary><div class="tablebox"><table><thead><tr><th>Coluna</th><th>Tipo MySQL</th><th>Nulo</th><th>Chave</th><th>Origem</th><th>Descrição</th></tr></thead><tbody>
+<tr><td><code>id_fornecedor</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">PK / AUTO_INCREMENT</td><td>PLANILHA</td><td>Identificador único do fornecedor.</td></tr>
+<tr><td><code>razao_social</code></td><td><code>VARCHAR(180)</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Razão social ou nome cadastrado do fornecedor.</td></tr>
+<tr><td><code>cnpj</code></td><td><code>VARCHAR(18)</code></td><td>Sim</td><td class="key">UNIQUE</td><td>PLANILHA</td><td>CNPJ do fornecedor, quando disponível.</td></tr>
+<tr><td><code>telefone</code></td><td><code>VARCHAR(120)</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Telefone comercial.</td></tr>
+<tr><td><code>email</code></td><td><code>VARCHAR(150)</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>E-mail de contato do fornecedor.</td></tr>
+<tr><td><code>endereco</code></td><td><code>VARCHAR(250)</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Endereço comercial.</td></tr>
+<tr><td><code>status</code></td><td><code>VARCHAR(120)</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Situação cadastral do fornecedor.</td></tr>
+</tbody></table></div></details>
+<details data-search="material insumos e estoque id_material nome categoria descricao quantidade_estoque estoque_minimo valor validade localizacao situacao_estoque"><summary><code>material</code> — Insumos e estoque <small>(10 campos · 15 registros · 0 FKs)</small></summary><div class="tablebox"><table><thead><tr><th>Coluna</th><th>Tipo MySQL</th><th>Nulo</th><th>Chave</th><th>Origem</th><th>Descrição</th></tr></thead><tbody>
+<tr><td><code>id_material</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">PK / AUTO_INCREMENT</td><td>PLANILHA</td><td>Identificador único do material.</td></tr>
+<tr><td><code>nome</code></td><td><code>VARCHAR(180)</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Nome.</td></tr>
+<tr><td><code>categoria</code></td><td><code>VARCHAR(120)</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Categoria para classificação do material.</td></tr>
+<tr><td><code>descricao</code></td><td><code>TEXT</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Características ou informações complementares.</td></tr>
+<tr><td><code>quantidade_estoque</code></td><td><code>INT</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Saldo atual disponível, mantido pelas movimentações de estoque.</td></tr>
+<tr><td><code>estoque_minimo</code></td><td><code>INT</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Limite usado para indicar estoque baixo.</td></tr>
+<tr><td><code>valor</code></td><td><code>DECIMAL(12,2)</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Valor monetário informado.</td></tr>
+<tr><td><code>validade</code></td><td><code>DATE</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Data de validade do material.</td></tr>
+<tr><td><code>localizacao</code></td><td><code>VARCHAR(120)</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Local físico onde o material fica armazenado.</td></tr>
+<tr><td><code>situacao_estoque</code></td><td><code>VARCHAR(120)</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Classificação do estoque conforme o saldo mínimo.</td></tr>
+</tbody></table></div></details>
+<details data-search="procedimento serviços prestados id_procedimento nome descricao preco duracao_estimada_min"><summary><code>procedimento</code> — Serviços prestados <small>(5 campos · 10 registros · 0 FKs)</small></summary><div class="tablebox"><table><thead><tr><th>Coluna</th><th>Tipo MySQL</th><th>Nulo</th><th>Chave</th><th>Origem</th><th>Descrição</th></tr></thead><tbody>
+<tr><td><code>id_procedimento</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">PK / AUTO_INCREMENT</td><td>PLANILHA</td><td>Identificador único do procedimento.</td></tr>
+<tr><td><code>nome</code></td><td><code>VARCHAR(180)</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Nome.</td></tr>
+<tr><td><code>descricao</code></td><td><code>TEXT</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Descrição técnica ou comercial do procedimento.</td></tr>
+<tr><td><code>preco</code></td><td><code>DECIMAL(12,2)</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Preco.</td></tr>
+<tr><td><code>duracao_estimada_min</code></td><td><code>INT</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Duração prevista em minutos.</td></tr>
+</tbody></table></div></details>
+<details data-search="equipamento equipamentos odontológicos id_equipamento nome tipo numero_serie id_consultorio id_responsavel data_aquisicao ultima_manutencao status"><summary><code>equipamento</code> — Equipamentos odontológicos <small>(9 campos · 10 registros · 2 FKs)</small></summary><div class="tablebox"><table><thead><tr><th>Coluna</th><th>Tipo MySQL</th><th>Nulo</th><th>Chave</th><th>Origem</th><th>Descrição</th></tr></thead><tbody>
+<tr><td><code>id_equipamento</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">PK / AUTO_INCREMENT</td><td>PLANILHA</td><td>Identificador único do equipamento.</td></tr>
+<tr><td><code>nome</code></td><td><code>VARCHAR(180)</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Nome.</td></tr>
+<tr><td><code>tipo</code></td><td><code>VARCHAR(120)</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Tipo.</td></tr>
+<tr><td><code>numero_serie</code></td><td><code>VARCHAR(120)</code></td><td>Sim</td><td class="key">UNIQUE</td><td>PLANILHA</td><td>Número de série único.</td></tr>
+<tr><td><code>id_consultorio</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">FK → consultorio.id_consultorio</td><td>PLANILHA</td><td>Consultório ao qual o equipamento está vinculado.</td></tr>
+<tr><td><code>id_responsavel</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">FK → funcionario.id_funcionario</td><td>PLANILHA</td><td>Identificador do funcionário responsável.</td></tr>
+<tr><td><code>data_aquisicao</code></td><td><code>DATE</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Data de aquisição.</td></tr>
+<tr><td><code>ultima_manutencao</code></td><td><code>DATE</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Data da última manutenção informada.</td></tr>
+<tr><td><code>status</code></td><td><code>VARCHAR(120)</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Estado operacional do equipamento.</td></tr>
+</tbody></table></div></details>
+<details data-search="manutencao histórico de manutenção id_manutencao id_equipamento tecnico_responsavel tipo_manutencao data_inicio data_fim descricao custo status id_funcionario"><summary><code>manutencao</code> — Histórico de manutenção <small>(10 campos · 10 registros · 2 FKs)</small></summary><div class="tablebox"><table><thead><tr><th>Coluna</th><th>Tipo MySQL</th><th>Nulo</th><th>Chave</th><th>Origem</th><th>Descrição</th></tr></thead><tbody>
+<tr><td><code>id_manutencao</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">PK / AUTO_INCREMENT</td><td>PLANILHA</td><td>Identificador único do registro de manutenção.</td></tr>
+<tr><td><code>id_equipamento</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">FK → equipamento.id_equipamento</td><td>PLANILHA</td><td>Equipamento que recebe a intervenção.</td></tr>
+<tr><td><code>tecnico_responsavel</code></td><td><code>VARCHAR(180)</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Nome do prestador externo da manutenção.</td></tr>
+<tr><td><code>tipo_manutencao</code></td><td><code>VARCHAR(120)</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Classificação da intervenção (preventiva, corretiva ou calibração).</td></tr>
+<tr><td><code>data_inicio</code></td><td><code>DATE</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Data e hora de início.</td></tr>
+<tr><td><code>data_fim</code></td><td><code>DATE</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Data fim.</td></tr>
+<tr><td><code>descricao</code></td><td><code>TEXT</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Descrição do serviço de manutenção.</td></tr>
+<tr><td><code>custo</code></td><td><code>DECIMAL(12,2)</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Custo monetário registrado para a intervenção.</td></tr>
+<tr><td><code>status</code></td><td><code>VARCHAR(120)</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Situação do serviço de manutenção.</td></tr>
+<tr><td><code>id_funcionario</code></td><td><code>BIGINT</code></td><td>Sim</td><td class="key">FK → funcionario.id_funcionario</td><td>DER (adicional)</td><td>Funcionário interno responsável, quando identificado; texto externo preservado.</td></tr>
+</tbody></table></div></details>
+<details data-search="agendamento agenda da clínica id_agendamento id_paciente id_funcionario id_consultorio data horario situacao"><summary><code>agendamento</code> — Agenda da clínica <small>(7 campos · 70 registros · 3 FKs)</small></summary><div class="tablebox"><table><thead><tr><th>Coluna</th><th>Tipo MySQL</th><th>Nulo</th><th>Chave</th><th>Origem</th><th>Descrição</th></tr></thead><tbody>
+<tr><td><code>id_agendamento</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">PK / AUTO_INCREMENT</td><td>PLANILHA</td><td>Identificador único do agendamento.</td></tr>
+<tr><td><code>id_paciente</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">FK → paciente.id_paciente</td><td>PLANILHA</td><td>Paciente agendado.</td></tr>
+<tr><td><code>id_funcionario</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">FK → funcionario.id_funcionario</td><td>PLANILHA</td><td>Profissional associado ao horário.</td></tr>
+<tr><td><code>id_consultorio</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">FK → consultorio.id_consultorio</td><td>PLANILHA</td><td>Sala reservada para o horário.</td></tr>
+<tr><td><code>data</code></td><td><code>DATE</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Data do evento registrado.</td></tr>
+<tr><td><code>horario</code></td><td><code>TIME</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Horario.</td></tr>
+<tr><td><code>situacao</code></td><td><code>VARCHAR(120)</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Situação do registro.</td></tr>
+</tbody></table></div></details>
+<details data-search="atendimento atendimentos realizados id_atendimento id_paciente id_profissional id_consultorio data descricao status id_agendamento"><summary><code>atendimento</code> — Atendimentos realizados <small>(8 campos · 50 registros · 4 FKs)</small></summary><div class="tablebox"><table><thead><tr><th>Coluna</th><th>Tipo MySQL</th><th>Nulo</th><th>Chave</th><th>Origem</th><th>Descrição</th></tr></thead><tbody>
+<tr><td><code>id_atendimento</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">PK / AUTO_INCREMENT</td><td>PLANILHA</td><td>Identificador único do atendimento.</td></tr>
+<tr><td><code>id_paciente</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">FK → paciente.id_paciente</td><td>PLANILHA</td><td>Paciente atendido.</td></tr>
+<tr><td><code>id_profissional</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">FK → funcionario.id_funcionario</td><td>PLANILHA</td><td>Identificador do profissional responsável.</td></tr>
+<tr><td><code>id_consultorio</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">FK → consultorio.id_consultorio</td><td>PLANILHA</td><td>Consultório onde ocorreu o atendimento.</td></tr>
+<tr><td><code>data</code></td><td><code>DATE</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Data do evento registrado.</td></tr>
+<tr><td><code>descricao</code></td><td><code>TEXT</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Descrição geral do atendimento realizado.</td></tr>
+<tr><td><code>status</code></td><td><code>VARCHAR(120)</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Situação do atendimento.</td></tr>
+<tr><td><code>id_agendamento</code></td><td><code>BIGINT</code></td><td>Sim</td><td class="key">FK → agendamento.id_agendamento</td><td>DER (adicional)</td><td>Agendamento de origem, identificado pela descrição quando possível.</td></tr>
+</tbody></table></div></details>
+<details data-search="atendimento_procedimento serviços de cada atendimento id id_atendimento id_procedimento quantidade valor_cobrado"><summary><code>atendimento_procedimento</code> — Serviços de cada atendimento <small>(5 campos · 83 registros · 2 FKs)</small></summary><div class="tablebox"><table><thead><tr><th>Coluna</th><th>Tipo MySQL</th><th>Nulo</th><th>Chave</th><th>Origem</th><th>Descrição</th></tr></thead><tbody>
+<tr><td><code>id</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">PK / AUTO_INCREMENT</td><td>PLANILHA</td><td>Identificador sequencial do registro.</td></tr>
+<tr><td><code>id_atendimento</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">FK → atendimento.id_atendimento</td><td>PLANILHA</td><td>Atendimento em que o procedimento foi realizado.</td></tr>
+<tr><td><code>id_procedimento</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">FK → procedimento.id_procedimento</td><td>PLANILHA</td><td>Procedimento realizado.</td></tr>
+<tr><td><code>quantidade</code></td><td><code>INT</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Número de ocorrências do procedimento no atendimento.</td></tr>
+<tr><td><code>valor_cobrado</code></td><td><code>DECIMAL(12,2)</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Valor cobrado.</td></tr>
+</tbody></table></div></details>
+<details data-search="plano_tratamento planos terapêuticos id_plano id_paciente id_profissional descricao data_inicio data_prevista_fim situacao"><summary><code>plano_tratamento</code> — Planos terapêuticos <small>(7 campos · 8 registros · 2 FKs)</small></summary><div class="tablebox"><table><thead><tr><th>Coluna</th><th>Tipo MySQL</th><th>Nulo</th><th>Chave</th><th>Origem</th><th>Descrição</th></tr></thead><tbody>
+<tr><td><code>id_plano</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">PK / AUTO_INCREMENT</td><td>PLANILHA</td><td>Identificador único do plano de tratamento.</td></tr>
+<tr><td><code>id_paciente</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">FK → paciente.id_paciente</td><td>PLANILHA</td><td>Paciente proprietário do plano.</td></tr>
+<tr><td><code>id_profissional</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">FK → funcionario.id_funcionario</td><td>PLANILHA</td><td>Identificador do profissional responsável.</td></tr>
+<tr><td><code>descricao</code></td><td><code>TEXT</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Descrição ou objetivo do tratamento.</td></tr>
+<tr><td><code>data_inicio</code></td><td><code>DATE</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Data inicio.</td></tr>
+<tr><td><code>data_prevista_fim</code></td><td><code>DATE</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Data prevista fim.</td></tr>
+<tr><td><code>situacao</code></td><td><code>VARCHAR(120)</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Situação do registro.</td></tr>
+</tbody></table></div></details>
+<details data-search="plano_procedimento procedimentos planejados id id_plano id_procedimento quantidade valor_previsto"><summary><code>plano_procedimento</code> — Procedimentos planejados <small>(5 campos · 12 registros · 2 FKs)</small></summary><div class="tablebox"><table><thead><tr><th>Coluna</th><th>Tipo MySQL</th><th>Nulo</th><th>Chave</th><th>Origem</th><th>Descrição</th></tr></thead><tbody>
+<tr><td><code>id</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">PK / AUTO_INCREMENT</td><td>PLANILHA</td><td>Identificador sequencial do registro.</td></tr>
+<tr><td><code>id_plano</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">FK → plano_tratamento.id_plano</td><td>PLANILHA</td><td>Plano de tratamento ao qual o procedimento pertence.</td></tr>
+<tr><td><code>id_procedimento</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">FK → procedimento.id_procedimento</td><td>PLANILHA</td><td>Procedimento previsto no plano.</td></tr>
+<tr><td><code>quantidade</code></td><td><code>INT</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Quantidade planejada.</td></tr>
+<tr><td><code>valor_previsto</code></td><td><code>DECIMAL(12,2)</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Valor previsto registrado para o procedimento; não é coluna calculada.</td></tr>
+</tbody></table></div></details>
+<details data-search="pagamento recebimentos id_pagamento id_atendimento valor data_pagamento forma_pagamento situacao_financeira"><summary><code>pagamento</code> — Recebimentos <small>(6 campos · 50 registros · 1 FKs)</small></summary><div class="tablebox"><table><thead><tr><th>Coluna</th><th>Tipo MySQL</th><th>Nulo</th><th>Chave</th><th>Origem</th><th>Descrição</th></tr></thead><tbody>
+<tr><td><code>id_pagamento</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">PK / AUTO_INCREMENT</td><td>PLANILHA</td><td>Identificador único do pagamento.</td></tr>
+<tr><td><code>id_atendimento</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">FK → atendimento.id_atendimento</td><td>PLANILHA</td><td>Atendimento ao qual o lançamento se refere.</td></tr>
+<tr><td><code>valor</code></td><td><code>DECIMAL(12,2)</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Valor do lançamento.</td></tr>
+<tr><td><code>data_pagamento</code></td><td><code>DATE</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Data e hora do recebimento, quando houver.</td></tr>
+<tr><td><code>forma_pagamento</code></td><td><code>VARCHAR(120)</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Meio de pagamento utilizado ou previsto.</td></tr>
+<tr><td><code>situacao_financeira</code></td><td><code>VARCHAR(120)</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Situacao financeira.</td></tr>
+</tbody></table></div></details>
+<details data-search="compra pedidos e compras id_compra id_fornecedor id_funcionario data_compra data_recebimento situacao"><summary><code>compra</code> — Pedidos e compras <small>(6 campos · 6 registros · 2 FKs)</small></summary><div class="tablebox"><table><thead><tr><th>Coluna</th><th>Tipo MySQL</th><th>Nulo</th><th>Chave</th><th>Origem</th><th>Descrição</th></tr></thead><tbody>
+<tr><td><code>id_compra</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">PK / AUTO_INCREMENT</td><td>PLANILHA</td><td>Identificador único do pedido de compra.</td></tr>
+<tr><td><code>id_fornecedor</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">FK → fornecedor.id_fornecedor</td><td>PLANILHA</td><td>Fornecedor associado à compra.</td></tr>
+<tr><td><code>id_funcionario</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">FK → funcionario.id_funcionario</td><td>PLANILHA</td><td>Funcionário responsável pelo pedido, quando indicado.</td></tr>
+<tr><td><code>data_compra</code></td><td><code>DATE</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Data em que a compra foi registrada.</td></tr>
+<tr><td><code>data_recebimento</code></td><td><code>DATE</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Data de recebimento dos itens.</td></tr>
+<tr><td><code>situacao</code></td><td><code>VARCHAR(120)</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Situação do registro.</td></tr>
+</tbody></table></div></details>
+<details data-search="item_compra itens das compras id id_compra id_material quantidade valor_unitario valor_total"><summary><code>item_compra</code> — Itens das compras <small>(6 campos · 12 registros · 2 FKs)</small></summary><div class="tablebox"><table><thead><tr><th>Coluna</th><th>Tipo MySQL</th><th>Nulo</th><th>Chave</th><th>Origem</th><th>Descrição</th></tr></thead><tbody>
+<tr><td><code>id</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">PK / AUTO_INCREMENT</td><td>PLANILHA</td><td>Identificador sequencial do registro.</td></tr>
+<tr><td><code>id_compra</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">FK → compra.id_compra</td><td>PLANILHA</td><td>Compra à qual o item pertence.</td></tr>
+<tr><td><code>id_material</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">FK → material.id_material</td><td>PLANILHA</td><td>Material comprado.</td></tr>
+<tr><td><code>quantidade</code></td><td><code>INT</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Quantidade adquirida do material.</td></tr>
+<tr><td><code>valor_unitario</code></td><td><code>DECIMAL(12,2)</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Preço unitário negociado.</td></tr>
+<tr><td><code>valor_total</code></td><td><code>DECIMAL(12,2)</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Total calculado automaticamente como quantidade × valor_unitario.</td></tr>
+</tbody></table></div></details>
+<details data-search="producao produção de próteses e peças id_producao tipo_producao id_responsavel quantidade data_inicio data_fim status"><summary><code>producao</code> — Produção de próteses e peças <small>(7 campos · 8 registros · 1 FKs)</small></summary><div class="tablebox"><table><thead><tr><th>Coluna</th><th>Tipo MySQL</th><th>Nulo</th><th>Chave</th><th>Origem</th><th>Descrição</th></tr></thead><tbody>
+<tr><td><code>id_producao</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">PK / AUTO_INCREMENT</td><td>PLANILHA</td><td>Identificador único da ordem de produção.</td></tr>
+<tr><td><code>tipo_producao</code></td><td><code>VARCHAR(180)</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Categoria do processo produtivo.</td></tr>
+<tr><td><code>id_responsavel</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">FK → funcionario.id_funcionario</td><td>PLANILHA</td><td>Identificador do funcionário responsável.</td></tr>
+<tr><td><code>quantidade</code></td><td><code>INT</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Quantidade prevista ou produzida na ordem.</td></tr>
+<tr><td><code>data_inicio</code></td><td><code>DATE</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Data e hora do início da produção.</td></tr>
+<tr><td><code>data_fim</code></td><td><code>DATE</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Data fim.</td></tr>
+<tr><td><code>status</code></td><td><code>VARCHAR(120)</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Situação do processo de produção.</td></tr>
+</tbody></table></div></details>
+<details data-search="item_producao consumo na produção id id_producao id_material quantidade_consumida"><summary><code>item_producao</code> — Consumo na produção <small>(4 campos · 11 registros · 2 FKs)</small></summary><div class="tablebox"><table><thead><tr><th>Coluna</th><th>Tipo MySQL</th><th>Nulo</th><th>Chave</th><th>Origem</th><th>Descrição</th></tr></thead><tbody>
+<tr><td><code>id</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">PK / AUTO_INCREMENT</td><td>PLANILHA</td><td>Identificador sequencial do registro.</td></tr>
+<tr><td><code>id_producao</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">FK → producao.id_producao</td><td>PLANILHA</td><td>Ordem de produção que utiliza o material.</td></tr>
+<tr><td><code>id_material</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">FK → material.id_material</td><td>PLANILHA</td><td>Material empregado.</td></tr>
+<tr><td><code>quantidade_consumida</code></td><td><code>INT</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Quantidade consumida.</td></tr>
+</tbody></table></div></details>
+<details data-search="movimentacao_estoque entradas e saídas de estoque id_movimentacao id_material tipo quantidade data id_responsavel origem id_compra id_producao"><summary><code>movimentacao_estoque</code> — Entradas e saídas de estoque <small>(9 campos · 30 registros · 4 FKs)</small></summary><div class="tablebox"><table><thead><tr><th>Coluna</th><th>Tipo MySQL</th><th>Nulo</th><th>Chave</th><th>Origem</th><th>Descrição</th></tr></thead><tbody>
+<tr><td><code>id_movimentacao</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">PK / AUTO_INCREMENT</td><td>PLANILHA</td><td>Identificador único da movimentação.</td></tr>
+<tr><td><code>id_material</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">FK → material.id_material</td><td>PLANILHA</td><td>Material movimentado.</td></tr>
+<tr><td><code>tipo</code></td><td><code>VARCHAR(120)</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Tipo.</td></tr>
+<tr><td><code>quantidade</code></td><td><code>INT</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Quantidade movimentada, sempre positiva.</td></tr>
+<tr><td><code>data</code></td><td><code>DATE</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Data do evento registrado.</td></tr>
+<tr><td><code>id_responsavel</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">FK → funcionario.id_funcionario</td><td>PLANILHA</td><td>Identificador do funcionário responsável.</td></tr>
+<tr><td><code>origem</code></td><td><code>VARCHAR(120)</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Origem textual do movimento de estoque.</td></tr>
+<tr><td><code>id_compra</code></td><td><code>BIGINT</code></td><td>Sim</td><td class="key">FK → compra.id_compra</td><td>DER (adicional)</td><td>Compra de origem, derivada do texto origem.</td></tr>
+<tr><td><code>id_producao</code></td><td><code>BIGINT</code></td><td>Sim</td><td class="key">FK → producao.id_producao</td><td>DER (adicional)</td><td>Produção de origem, derivada do texto origem.</td></tr>
+</tbody></table></div></details>
+<details data-search="esterilizacao ciclos de esterilização id_ciclo id_equipamento id_responsavel inicio_ciclo fim_ciclo tipo resultado observacoes"><summary><code>esterilizacao</code> — Ciclos de esterilização <small>(8 campos · 30 registros · 2 FKs)</small></summary><div class="tablebox"><table><thead><tr><th>Coluna</th><th>Tipo MySQL</th><th>Nulo</th><th>Chave</th><th>Origem</th><th>Descrição</th></tr></thead><tbody>
+<tr><td><code>id_ciclo</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">PK / AUTO_INCREMENT</td><td>PLANILHA</td><td>Identificador do ciclo de esterilização.</td></tr>
+<tr><td><code>id_equipamento</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">FK → equipamento.id_equipamento</td><td>PLANILHA</td><td>Equipamento utilizado no ciclo.</td></tr>
+<tr><td><code>id_responsavel</code></td><td><code>BIGINT</code></td><td>Não</td><td class="key">FK → funcionario.id_funcionario</td><td>PLANILHA</td><td>Identificador do funcionário responsável.</td></tr>
+<tr><td><code>inicio_ciclo</code></td><td><code>DATETIME</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Inicio ciclo.</td></tr>
+<tr><td><code>fim_ciclo</code></td><td><code>DATETIME</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Fim ciclo.</td></tr>
+<tr><td><code>tipo</code></td><td><code>VARCHAR(120)</code></td><td>Não</td><td class="key">—</td><td>PLANILHA</td><td>Tipo.</td></tr>
+<tr><td><code>resultado</code></td><td><code>VARCHAR(120)</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Resultado.</td></tr>
+<tr><td><code>observacoes</code></td><td><code>TEXT</code></td><td>Sim</td><td class="key">—</td><td>PLANILHA</td><td>Observacoes.</td></tr>
+</tbody></table></div></details>
+</section><section class="panel"><h2>Relacionamentos implementados</h2><div class="tablebox"><table><thead><tr><th>Tabela origem</th><th>Campo</th><th>Tabela destino</th><th>Campo referenciado</th></tr></thead><tbody>
+<tr><td>equipamento</td><td>id_consultorio</td><td>consultorio</td><td>id_consultorio</td></tr>
+<tr><td>equipamento</td><td>id_responsavel</td><td>funcionario</td><td>id_funcionario</td></tr>
+<tr><td>manutencao</td><td>id_equipamento</td><td>equipamento</td><td>id_equipamento</td></tr>
+<tr><td>manutencao</td><td>id_funcionario</td><td>funcionario</td><td>id_funcionario</td></tr>
+<tr><td>agendamento</td><td>id_paciente</td><td>paciente</td><td>id_paciente</td></tr>
+<tr><td>agendamento</td><td>id_funcionario</td><td>funcionario</td><td>id_funcionario</td></tr>
+<tr><td>agendamento</td><td>id_consultorio</td><td>consultorio</td><td>id_consultorio</td></tr>
+<tr><td>atendimento</td><td>id_agendamento</td><td>agendamento</td><td>id_agendamento</td></tr>
+<tr><td>atendimento</td><td>id_paciente</td><td>paciente</td><td>id_paciente</td></tr>
+<tr><td>atendimento</td><td>id_profissional</td><td>funcionario</td><td>id_funcionario</td></tr>
+<tr><td>atendimento</td><td>id_consultorio</td><td>consultorio</td><td>id_consultorio</td></tr>
+<tr><td>atendimento_procedimento</td><td>id_atendimento</td><td>atendimento</td><td>id_atendimento</td></tr>
+<tr><td>atendimento_procedimento</td><td>id_procedimento</td><td>procedimento</td><td>id_procedimento</td></tr>
+<tr><td>plano_tratamento</td><td>id_paciente</td><td>paciente</td><td>id_paciente</td></tr>
+<tr><td>plano_tratamento</td><td>id_profissional</td><td>funcionario</td><td>id_funcionario</td></tr>
+<tr><td>plano_procedimento</td><td>id_plano</td><td>plano_tratamento</td><td>id_plano</td></tr>
+<tr><td>plano_procedimento</td><td>id_procedimento</td><td>procedimento</td><td>id_procedimento</td></tr>
+<tr><td>pagamento</td><td>id_atendimento</td><td>atendimento</td><td>id_atendimento</td></tr>
+<tr><td>compra</td><td>id_fornecedor</td><td>fornecedor</td><td>id_fornecedor</td></tr>
+<tr><td>compra</td><td>id_funcionario</td><td>funcionario</td><td>id_funcionario</td></tr>
+<tr><td>item_compra</td><td>id_compra</td><td>compra</td><td>id_compra</td></tr>
+<tr><td>item_compra</td><td>id_material</td><td>material</td><td>id_material</td></tr>
+<tr><td>producao</td><td>id_responsavel</td><td>funcionario</td><td>id_funcionario</td></tr>
+<tr><td>item_producao</td><td>id_producao</td><td>producao</td><td>id_producao</td></tr>
+<tr><td>item_producao</td><td>id_material</td><td>material</td><td>id_material</td></tr>
+<tr><td>movimentacao_estoque</td><td>id_material</td><td>material</td><td>id_material</td></tr>
+<tr><td>movimentacao_estoque</td><td>id_responsavel</td><td>funcionario</td><td>id_funcionario</td></tr>
+<tr><td>movimentacao_estoque</td><td>id_compra</td><td>compra</td><td>id_compra</td></tr>
+<tr><td>movimentacao_estoque</td><td>id_producao</td><td>producao</td><td>id_producao</td></tr>
+<tr><td>esterilizacao</td><td>id_equipamento</td><td>equipamento</td><td>id_equipamento</td></tr>
+<tr><td>esterilizacao</td><td>id_responsavel</td><td>funcionario</td><td>id_funcionario</td></tr>
+</tbody></table></div></section><section class="panel"><h2>Regras e validações do script</h2><ul><li>Cada tabela tem chave primária auto incremental, inclusive tabelas associativas com coluna <code>id</code> presente na planilha.</li><li>Chaves estrangeiras protegem os vínculos, com <code>ON DELETE RESTRICT</code> e <code>ON UPDATE CASCADE</code>.</li><li>Valores monetários e quantidades possuem <code>CHECK</code> para impedir números negativos.</li><li>CPF, CNPJ e número de série recebem unicidade; salas possuem unicidade por andar e número.</li><li>Os dados são importados sem sobrescrever a base anterior. O script não cria views/triggers da entrega antiga, pois a versão atual documenta somente os objetos definidos no novo SQL.</li><li>Dados clínicos identificáveis exigem controle de acesso e atenção à LGPD em produção; os dados fornecidos são fictícios.</li></ul></section><footer class="muted">Odontologia Sasaki · Dicionário consistente com odontologia_sasaki_atualizado.sql · 08/11/2026</footer></main></body></html>
