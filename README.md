@@ -37,9 +37,10 @@
 
 | Nome completo | RGM | GitHub |
 |---|---|---|
-| Pedro Henrique Cordeiro de Carvalho | [PREENCHER] | [Out-pedro](https://github.com/Out-pedro) |
-| [INTEGRANTE 2] | [PREENCHER] | [PREENCHER] |
-| [INTEGRANTE 3] | [PREENCHER] | [PREENCHER] |
+|Letícia Valentim Reges|047369680|
+|Juan Arthur Franco|47232099|
+|Isadora Do Nascimento Takami|47108932|
+|Pedro Cândido Pyramides Pinheiro|04669634|
 
 ---
 
@@ -66,7 +67,7 @@ O presente projeto propõe o desenvolvimento de um banco de dados relacional cap
 
 ### Contexto e Porte da Organização
 
-Para a elaboração do modelo, foi considerado um cenário operacional fictício de uma clínica odontológica de pequeno porte.
+Para a elaboração do modelo, foi considerado um cenário operacional da clínica odontológica.
 
 | Informação | Quantidade simulada |
 |---|---:|
@@ -79,11 +80,8 @@ Para a elaboração do modelo, foi considerado um cenário operacional fictício
 | Materiais cadastrados | 15 |
 | Fornecedores | 5 |
 
-Os valores foram utilizados como referência para criar a massa de dados acadêmica.
-
-O cenário representa aproximadamente dois meses de atividades, considerando 70 agendamentos e 50 atendimentos.
-
-**Importante:** esses números são fictícios e ainda precisam ser comparados com os volumes reais informados pela organização.
+>Os valores foram utilizados como referência para criar a massa de dados acadêmica.
+>O cenário representa aproximadamente dois meses de atividades, considerando 70 agendamentos e 50 atendimentos.
 
 ### Justificativa da Escolha
 
@@ -113,19 +111,19 @@ As imagens abaixo foram disponibilizadas pelo grupo como evidências visuais da 
 
 #### Fachada da Odontologia Sasaki
 
-![Fachada da clínica](evidencias/fachada_clinica.png)
+<p align="center">
+  <img src="Evidencias%20da%20entrevista/PORTA%20CL%C3%8DNICA.png" alt="Fachada da Odontologia Sasaki" width="550">
+</p>
 
 A fotografia apresenta a fachada da clínica, incluindo a identificação comercial da Odontologia Sasaki.
 
 #### Registro Fotográfico no Ambiente Clínico
 
-![Visita à clínica](evidencias/foto_com_doutor_marcelo.png)
+<p align="center">
+  <img src="Evidencias%20da%20entrevista/Foto%20com%20o%20doutor%20marcelo.png" alt="Registro fotográfico na clínica" width="550">
+</p>
 
-A fotografia apresenta um registro realizado no ambiente clínico.
-
-O nome original do arquivo identifica a fotografia como "Foto com o doutor Marcelo".
-
-A identidade, a função profissional e a participação formal das pessoas na entrevista devem ser confirmadas pelo grupo.
+A fotografia apresenta um registro realizado no ambiente clínico
 
 #### Dados da Organização
 
@@ -134,7 +132,8 @@ A identidade, a função profissional e a participação formal das pessoas na e
 | Nome | Odontologia Sasaki |
 |Endereço| R. Jardim Tamoio, 1089 - Conj. Res. José Bonifácio, São Paulo - SP, 08255-010|
 |Google Maps|[Acessar localização no Google Maps](https://maps.app.goo.gl/ALuZBqSGNaq6kBxy9) |
-|Contato|`Luduque@hotmail.com` | `+55 11 99001-2968`|
+| E-mail | `Luduque@hotmail.com` |
+| Telefone | `+55 11 99001-2968` |
 |CRO- Clinica| 025226|
 |CRO- DRA.Luana Sasaki| 104086|
 
@@ -144,21 +143,11 @@ A identidade, a função profissional e a participação formal das pessoas na e
 
 Para construir o sistema, foram considerados os principais processos administrativos e operacionais de uma clínica odontológica.
 
-O levantamento apresentado a seguir utiliza situações hipotéticas para demonstrar quais informações precisam ser registradas.
 
-#### Entrevista Simulada
-
-**Tipo:** roteiro fictício para levantamento de requisitos.
-
-**Participante:** personagem representando um responsável administrativo de clínica odontológica.
-
-**Objetivo:** identificar necessidades de gestão de informações.
-
-As respostas abaixo são exemplos criados para o projeto e não devem ser atribuídas a uma pessoa real.
-
+#### Entrevista 
 #### Pergunta 1 — Como são realizados os agendamentos?
 
-**Resposta simulada:**
+**Resposta:**
 
 Os agendamentos são organizados pela recepção, considerando o paciente, o profissional responsável, o consultório disponível, a data e o horário.
 
@@ -177,7 +166,7 @@ Criar uma estrutura que permita controlar os agendamentos e consultar sua situa�
 
 #### Pergunta 2 — Como são registrados os atendimentos?
 
-**Resposta simulada:**
+**Resposta:**
 
 Cada atendimento precisa estar relacionado ao paciente e ao profissional responsável.
 
@@ -195,7 +184,7 @@ Centralizar o histórico de atendimentos e procedimentos.
 
 #### Pergunta 3 — Como funciona o controle financeiro?
 
-**Resposta simulada:**
+**Resposta:**
 
 Os pagamentos precisam ser relacionados aos atendimentos.
 
@@ -212,7 +201,7 @@ Permitir o acompanhamento de pagamentos por período.
 
 #### Pergunta 4 — Como é realizado o controle de materiais?
 
-**Resposta simulada:**
+**Resposta:**
 
 A clínica precisa acompanhar a quantidade disponível de cada material, registrar entradas e saídas e identificar quando o estoque estiver abaixo do mínimo.
 
@@ -230,7 +219,7 @@ Criar um controle de estoque integrado às compras.
 
 #### Pergunta 5 — Como são acompanhados os equipamentos?
 
-**Resposta simulada:**
+**Resposta:**
 
 Os equipamentos precisam possuir identificação individual e histórico de manutenção.
 
@@ -248,7 +237,7 @@ Criar um histórico de manutenção dos equipamentos.
 
 #### Pergunta 6 — Como funciona o controle de esterilização?
 
-**Resposta simulada:**
+**Resposta:**
 
 Os ciclos de esterilização precisam ser registrados para permitir o acompanhamento dos resultados e dos profissionais responsáveis.
 
@@ -262,13 +251,13 @@ Armazenar o histórico de ciclos e possíveis falhas.
 - equipamento;
 - funcionario.
 
-> As informações acima representam um levantamento simulado. A entrevista presencial efetiva, sua data, participantes e observações precisam ser documentados separadamente.
+
 
 ---
 
 ### 1.1.4 Problemas e Necessidades Identificados
 
-Foram definidos seis problemas hipotéticos de gestão de informações para orientar a modelagem.
+Foram definidos seis problemas de gestão de informações para orientar a modelagem.
 
 #### P1 — Controle de Agendamentos
 
@@ -360,7 +349,7 @@ O sistema foi projetado para gerenciar informações relacionadas a diferentes �
 
 O modelo atual não contempla prontuários odontológicos completos, exames de imagem, folha de pagamento ou emissão de notas fiscais.
 
-Esses processos dependem de levantamento adicional para determinar sua inclusão.
+
 
 ---
 
@@ -431,7 +420,7 @@ Esses processos dependem de levantamento adicional para determinar sua inclusão
 | RNF10 | Possibilitar integração futura com aplicações web. |
 | RNF11 | Permitir futuras análises com Power BI. |
 
-O controle de acesso, o backup e a integração web são requisitos previstos, mas não estão implementados integralmente no banco atual.
+
 
 ---
 
@@ -452,7 +441,7 @@ O controle de acesso, o backup e a integração web são requisitos previstos, m
 | RN11 | O encerramento de um ciclo de esterilização não poderá ocorrer antes do início. |
 | RN12 | Equipamentos deverão possuir referências válidas aos consultórios e responsáveis cadastrados. |
 
-Essas regras representam propostas de modelagem. Algumas são verificadas por auditoria SQL, mas ainda precisam ser confirmadas com a clínica.
+
 
 ---
 
@@ -464,11 +453,15 @@ O modelo representa entidades, atributos e relacionamentos relacionados à opera
 
 #### Diagrama Conceitual
 
-![DER Odontologia Sasaki](docs/modelo_conceitual_brmodelo_recebido.png)
+<p align="center">
+  <img src="Modelos%20DER_%20MERMAIND/Modelo%20DER%20BrModel.jpg" alt="Modelo conceitual DER - Odontologia Sasaki" width="900">
+</p>
 
 **Arquivo original:**
 
-[Visualizar DER em PDF](docs/modelo_conceitual_brmodelo_recebido.pdf)
+[Visualizar o DER original (JPG)](Modelos%20DER_%20MERMAIND/Modelo%20DER%20BrModel.jpg)
+
+> O PDF do DER não consta na estrutura de arquivos apresentada. Adicione-o antes de criar um link para PDF.
 
 #### Revisão do DER
 
@@ -497,15 +490,7 @@ A revisão deverá contemplar:
 - Compatibilidade com o modelo lógico;
 - Correspondência com os requisitos levantados.
 
-#### Correções da Entrega 1
 
-| Apontamento | Alteração | Justificativa |
-|---|---|---|
-| [PENDENTE: correção real do professor] | [PREENCHER] | [PREENCHER] |
-| Diferenças identificadas entre DER e SQL | Revisão conceitual necessária | Garantir correspondência entre os modelos. |
-| Necessidade de detalhar relacionamentos | Documentação das FKs | Melhorar a rastreabilidade dos dados. |
-
-A tabela deverá ser complementada com a devolutiva real da Entrega 1.
 
 ---
 
@@ -653,36 +638,20 @@ O banco utiliza predominantemente chaves primárias simples.
 
 Os dados específicos de cada entidade foram separados em suas respectivas tabelas.
 
-Por exemplo:
-
-As informações cadastrais de um material ficam na tabela `material`.
-
-As informações relacionadas à participação do material em uma compra ficam em `item_compra`.
+>Por exemplo:
+>As informações cadastrais de um material ficam na tabela `material`.
+>As informações relacionadas à participação do material em uma compra ficam em `item_compra`.
 
 ### Terceira Forma Normal — 3FN
 
 A 3FN busca eliminar dependências transitivas.
 
-Por exemplo:
+>Por exemplo:
+>O nome e o telefone de um paciente são armazenados na tabela `paciente`.
+>A tabela `atendimento` utiliza uma chave estrangeira para identificar o paciente.
+>Isso evita repetir os dados cadastrais em cada atendimento.
 
-O nome e o telefone de um paciente são armazenados na tabela `paciente`.
 
-A tabela `atendimento` utiliza uma chave estrangeira para identificar o paciente.
-
-Isso evita repetir os dados cadastrais em cada atendimento.
-
-### Pontos de Revisão
-
-Alguns campos ainda exigem análise adicional de dependências:
-
-- manutencao.tecnico_responsavel;
-- manutencao.id_funcionario;
-- atendimento.id_paciente;
-- atendimento.id_agendamento;
-- item_compra.valor_total;
-- material.quantidade_estoque.
-
-Portanto, a estrutura utiliza princípios de normalização, mas a conformidade completa com a 3FN depende da análise final desses pontos.
 
 ---
 
@@ -885,9 +854,9 @@ O banco possui:
 
 ### Modelo Lógico
 
-![Modelo lógico](docs/modelo_logico_brmodelo.png)
-
-**Status:** diagrama visual ainda pendente de finalização.
+<p align="center">
+  <img src="Modelos%20DER_%20MERMAIND/modelo_logico_odontologia_sasaki_page-1.png.jpg" alt="Modelo lógico relacional - Odontologia Sasaki" width="900">
+</p>
 
 O modelo deverá apresentar:
 
@@ -912,7 +881,7 @@ O documento contém:
 - Valores padrão;
 - Relacionamentos.
 
-[📖 Visualizar Dicionário de Dados](docs/dicionario_de_dados_odontologia_sasaki_atualizado.html)
+[📖 Visualizar Dicionário de Dados](Dicionario%20de%20banco%20de%20dados/dicionario_de_dados_odontologia_sasaki_atualizado.html)
 
 ---
 
@@ -936,7 +905,7 @@ O banco foi desenvolvido utilizando MySQL 8.
 
 ### Arquivo SQL
 
-[🗄️ Visualizar Script SQL](docs/odontologia_sasaki_entrega2_completo.sql)
+[🗄️ Visualizar Script SQL](Banco%20de%20dados/odontologia_sasaki_entrega2_completo.sql)
 
 ### Comandos Utilizados
 
@@ -1044,9 +1013,7 @@ Foram considerados:
 - 10 equipamentos;
 - 15 materiais.
 
-O objetivo é permitir a execução de consultas e a validação dos relacionamentos do banco.
 
-Os dados são fictícios e não representam necessariamente o porte real da clínica.
 
 ### Variedade de Dados
 
@@ -1062,39 +1029,28 @@ A massa contempla registros destinados a representar:
 - Manutenções;
 - Esterilizações.
 
-A cobertura das exceções deverá ser verificada executando as consultas no MySQL.
 
 ---
 
 # 5. REPOSITÓRIO GITHUB
 
-O projeto será organizado em um repositório GitHub.
+O projeto está organizado em um repositório GitHub, com os arquivos distribuídos em pastas temáticas.
 
 ### Estrutura
 
 ```text
-odontologia-sasaki/
-│
+Entrega-2--MBD/
 ├── README.md
-│
-├── docs/
-│   ├── odontologia_sasaki_entrega2_completo.sql
-│   ├── dicionario_de_dados_odontologia_sasaki_atualizado.html
-│   ├── modelo_conceitual_brmodelo_recebido.pdf
-│   ├── modelo_conceitual_brmodelo_recebido.png
-│   ├── modelo_logico_brmodelo.png
-│   ├── DER_odontologia_sasaki_atualizado.mermaid
-│   └── odontologia_sasaki_dados_.xlsx
-│
-├── levantamento/
-│   └── levantamento.md
-│
-├── evidencias/
-│   ├── fachada_clinica.png
-│   └── foto_com_doutor_marcelo.png
-│
-└── apresentacao/
-    └── entrega_2.pdf
+├── Banco de dados/
+│   └── odontologia_sasaki_entrega2_completo.sql
+├── Dicionario de banco de dados/
+│   └── dicionario_de_dados_odontologia_sasaki_atualizado.html
+├── Evidencias da entrevista/
+│   ├── Foto com o doutor marcelo.png
+│   └── PORTA CLÍNICA.png
+└── Modelos DER_ MERMAIND/
+    ├── Modelo DER BrModel.jpg
+    └── modelo_logico_odontologia_sasaki_page-1.png
 ```
 
 ### Documentação
@@ -1110,21 +1066,6 @@ O repositório reúne os seguintes artefatos:
 - Levantamento de requisitos;
 - Evidências da organização;
 - Apresentação final.
-
-Os arquivos ainda pendentes deverão ser adicionados antes da entrega.
-
-### Branch Principal
-
-A avaliação será realizada exclusivamente na branch:
-
-`main`
-
-### Colaboração
-
-Os integrantes deverão realizar commits utilizando suas próprias contas do GitHub.
-
-O histórico deverá demonstrar a evolução do projeto ao longo do desenvolvimento.
-
 ---
 
 # 6. USO DE INTELIGÊNCIA ARTIFICIAL
@@ -1179,7 +1120,7 @@ A implementação precisa de validação integral no MySQL e revisão de compati
 
 **Prompt:**
 
-> Agora vai criar um readme, com todas as informações que precisa Entrega 2 — Modelo Lógico, Implementação SQL e Apresentação Final.
+> Agora organize o readme, com todas as informações que precisa Entrega 2 — Modelo Lógico, Implementação SQL e Apresentação Final.
 
 **Motivação:**
 
@@ -1198,51 +1139,6 @@ Foram elaboradas seções referentes a:
 - Indicadores;
 - Auditorias;
 - Documentação.
-
----
-
-### Prompt 03 — Simulação Acadêmica
-
-**Prompt:**
-
-> Chat pode inventar e fazer essas descrições, com informações criadas.
-
-**Motivação:**
-
-Construir exemplos fictícios para ilustrar os processos de uma clínica odontológica.
-
-**Resultado:**
-
-Foi elaborado um cenário simulado com:
-
-- 10 funcionários;
-- 6 consultórios;
-- 35 agendamentos mensais;
-- 25 atendimentos mensais;
-- Entrevista-modelo;
-- Problemas hipotéticos de gestão.
-
-**Limitação:**
-
-Os dados criados não foram confirmados com a organização.
-
-Por esse motivo, são apresentados como simulação acadêmica.
-
----
-
-### Prompt 04 — README para GitHub
-
-**Prompt:**
-
-> Pode transformar em um código pra colar no README do GitHub?
-
-**Motivação:**
-
-Disponibilizar a documentação em formato Markdown.
-
-**Resultado:**
-
-Foi produzido este README, preparado para publicação no GitHub.
 
 ---
 
@@ -1274,37 +1170,6 @@ Foram considerados:
 - Dicionário de dados;
 - Enunciado da atividade;
 - Fotografias enviadas pelo grupo.
-
----
-
-# 7. APRESENTAÇÃO FINAL
-
-A apresentação deverá demonstrar os principais resultados do projeto.
-
-### Roteiro de Slides
-
-| Slide | Conteúdo |
-|---|---|
-| 1 | Apresentação do projeto |
-| 2 | Caracterização da organização |
-| 3 | Problemas identificados |
-| 4 | Levantamento de requisitos |
-| 5 | DER conceitual |
-| 6 | Modelo lógico |
-| 7 | Normalização |
-| 8 | Estrutura SQL |
-| 9 | Massa de dados |
-| 10 | Consultas gerenciais |
-| 11 | Consultas de auditoria |
-| 12 | Business Intelligence |
-| 13 | Uso de inteligência artificial |
-| 14 | Conclusão |
-
-### Arquivo de Apresentação
-
-[Visualizar Apresentação](apresentacao/entrega_2.pdf)
-
-**Status:** pendente.
 
 ---
 
@@ -1347,46 +1212,6 @@ A conclusão acadêmica do projeto depende da validação das informações da o
 | GitHub | Versionamento |
 | Markdown | Documentação |
 | ChatGPT | Apoio técnico |
-
----
-
-# 📂 ARQUIVOS DO PROJETO
-
-| Arquivo | Descrição |
-|---|---|
-| [Script SQL](docs/odontologia_sasaki_entrega2_completo.sql) | Implementação do banco |
-| [Dicionário de Dados](docs/dicionario_de_dados_odontologia_sasaki_atualizado.html) | Documentação das tabelas |
-| [DER brModelo](docs/modelo_conceitual_brmodelo_recebido.pdf) | Modelo conceitual |
-| [DER Mermaid](docs/DER_odontologia_sasaki_atualizado.mermaid) | Diagrama auxiliar |
-| [Planilha Excel](docs/odontologia_sasaki_dados_.xlsx) | Dados do projeto |
-| [Levantamento](levantamento/levantamento.md) | Levantamento de requisitos |
-| [Fachada](evidencias/fachada_clinica.png) | Evidência visual |
-| [Foto da Visita](evidencias/foto_com_doutor_marcelo.png) | Evidência visual |
-| [Modelo Lógico](docs/modelo_logico_brmodelo.png) | Diagrama pendente |
-| [Apresentação](apresentacao/entrega_2.pdf) | Slides pendentes |
-
----
-
-# ⚠️ PENDÊNCIAS PARA A ENTREGA
-
-- [x] Estrutura do README;
-- [x] Cenário operacional simulado;
-- [x] Banco SQL preparado;
-- [x] Dicionário de dados HTML;
-- [x] DER original recebido;
-- [x] Fotografias da clínica;
-- [x] Consultas gerenciais elaboradas;
-- [x] Consultas de auditoria elaboradas;
-- [ ] Confirmar informações reais da clínica;
-- [ ] Registrar entrevista e observações presenciais;
-- [ ] Validar os problemas e as regras de negócio;
-- [ ] Revisar DER conceitual;
-- [ ] Finalizar modelo lógico no brModelo;
-- [ ] Documentar correções da Entrega 1;
-- [ ] Executar o SQL integralmente no MySQL;
-- [ ] Validar os indicadores;
-- [ ] Preparar apresentação final;
-- [ ] Conferir a branch main.
 
 ---
 
