@@ -35,8 +35,8 @@
 
 # 👥 INTEGRANTES
 
-| Nome completo | RGM | GitHub |
-|---|---|---|
+| Nome completo | RGM |
+|---|---|
 |Letícia Valentim Reges|047369680|
 |Juan Arthur Franco|47232099|
 |Isadora Do Nascimento Takami|47108932|
