@@ -35,12 +35,12 @@
 
 # 👥 INTEGRANTES
 
-| Nome completo | RGM |
-|---|---|
-|Letícia Valentim Reges|047369680|
-|Juan Arthur Franco|47232099|
-|Isadora Do Nascimento Takami|47108932|
-|Pedro Cândido Pyramides Pinheiro|04669634|
+| Nome completo | RGM | GITHUB|
+|---|---|---|
+|Letícia Valentim Reges|047369680| regezxs |
+|Juan Arthur Franco|47232099| Juamelis|
+|Isadora Do Nascimento Takami|47108932| isadoratakami-cloud |
+|Pedro Cândido Pyramides Pinheiro|04669634| 	pedropyramides|
 
 ---
 
@@ -85,23 +85,7 @@ Para a elaboração do modelo, foi considerado um cenário operacional da clíni
 
 ### Justificativa da Escolha
 
-A Odontologia Sasaki foi escolhida como objeto de estudo por apresentar processos que podem ser representados em um banco de dados relacional.
-
-A gestão de uma clínica odontológica envolve diversos relacionamentos entre informações.
-
-Por exemplo:
-
-- Um paciente pode possuir vários agendamentos;
-- Um funcionário pode realizar diferentes atendimentos;
-- Um consultório pode receber vários pacientes;
-- Um atendimento pode possuir diferentes procedimentos;
-- Um equipamento pode passar por várias manutenções;
-- Um fornecedor pode participar de diferentes compras;
-- Um material pode apresentar várias movimentações de estoque.
-
-Essas características permitem aplicar os conceitos de modelagem conceitual, lógica e física.
-
-O sistema proposto busca organizar informações de maneira centralizada, facilitando consultas, análises e o acompanhamento das atividades.
+Escolhemos a Odontologia Sasaki por apresentar processos que podem ser organizados e representados em um banco de dados relacional. A rotina de uma clínica odontológica envolve diferentes informações relacionadas a pacientes, funcionários, agendamentos, atendimentos, procedimentos, equipamentos, fornecedores e controle de estoque. Esses processos permitem aplicar os conceitos de modelagem conceitual, lógica e física, demonstrando como os dados podem ser estruturados e relacionados. O sistema proposto tem como objetivo centralizar e organizar essas informações, facilitando o acesso aos dados, as consultas e o acompanhamento das atividades da clínica.
 
 ---
 
